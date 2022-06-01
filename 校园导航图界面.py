@@ -3,7 +3,7 @@ import tkinter as tk
 window = tk.Tk()
 window.title('校园导航系统')
 window.geometry('750x700')
-canvas=tk.Canvas(window,bg='white',height=500,width=600)
+canvas=tk.Canvas(window,bg='white',height=500,width=680)
 # window.mainloop()
 # x0,y0,x1,y1=50,50,80,80
 content_1="体育场"
@@ -17,7 +17,7 @@ canvas.create_line(247.5,55,237.5,190,fill='black',width=1)# 体育场与图书�
 canvas.create_text(236,125,text="400",font=("Arial",7,"bold"))
 
 canvas.create_line(265,37.5,387.5,150,fill='black',width=1)# 体育场与学术报告厅的边
-canvas.create_text(327,102,text="500",font=("Arial",7,"bold"))
+
 
 content_2="大会堂"
 oval_2=canvas.create_oval(270,115,305,150,fill='#71ad91')
@@ -74,6 +74,26 @@ canvas.create_text(140,380,text=content_14,font=("Arial",8,"bold"))
 content_15="宿舍"
 oval_15=canvas.create_oval(50,410,85,445,fill='#71ad91')
 canvas.create_text(50,420,text=content_15,font=("Arial",8,"bold"))
-
 canvas.pack()
+
+label = tk.Label(window,text='请选择您出发的地点:')
+label.pack()
+entry = tk.Entry(window,show=None)
+entry.pack()
+
+label_1 = tk.Label(window,text='请选择您到达的地点:')
+label_1.pack()
+entry_1 = tk.Entry(window,show=None)
+entry_1.pack()
+def Answer():
+    start=entry.get()
+    destination=entry_1.get()
+    if start == '体育场' and destination == '大会堂':
+        express = '最短路径为:体育场->大会堂'
+        t.insert('insert', express)
+b=tk.Button(window,text='Search For',width=10,height=2,command=Answer)
+b.pack()
+t = tk.Text(window,height=3)
+t.pack()
+
 window.mainloop()
