@@ -76,6 +76,25 @@ void Map::CreateMap()
 	}
 	main.close();		
 }
+
+void Map::ModifyMap(){
+	string a,b;
+	int distance;
+	cout<<"Please input the places you want to modify and the true distance:"<<endl;
+	cin>>a>>b>>distance;
+	for(int i=1;i<=vNum;i++){
+		for(int j=1;j<=vNum;j++){
+			if(name[i]==a&&name[j]==b){
+				adj[i][j].weight=distance;
+				adj[j][i].weight=distance;
+				break;
+			}
+		}
+	}
+	cout<<"Modify successfully!!!"<<endl;
+	
+}
+
 void Map::PrintAdjMatrix()//输出地图的邻接矩阵
 {
 	cout<<setw(8)<<"\t"<<"    ";
@@ -168,7 +187,8 @@ void choose(Map &G)//用户选择的功能
 			G.PrintAdjList();
 			break;
 		case 3:
-			cout<<"待完善！";
+// 			cout<<"待完善！";
+			G.ModifyMap();
 			break;
 		case 4:
 			cout<<"待完善！";
