@@ -148,7 +148,7 @@ def Answer_7():
       file.write('7\n')
       file.close()
       engine = pyttsx3.init()
-      engine.say("欢迎使用广东外语外贸大学校园导航系统!")
+      engine.say("欢迎使用广东外语外贸大学校园导航系统!没想到吧，我会说话！")
       engine.runAndWait()
       window.destroy()
 def Answer_8():
@@ -156,7 +156,7 @@ def Answer_8():
       file.write('8\n')
       file.close()
       engine = pyttsx3.init()
-      engine.say("感谢您的使用，咱们有缘再见")
+      engine.say("感谢您的使用，咱们有缘再见,最后特别祝林华老师身体健康，工作顺利")
       engine.runAndWait()
       window.destroy()
 label_0 = tk.Label(window,text='Please Choose The Function You Want.',fg='#000000',font = ('bold',12),width=60,height=2)
