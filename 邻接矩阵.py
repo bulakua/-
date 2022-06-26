@@ -42,7 +42,7 @@ def AUD():
 
 def LIB():
     engine = pyttsx3.init()
-    engine.say("广东外语外贸大学图书馆,广外卷王的聚集地")
+    engine.say("广东外语外贸大学图书馆,广外卷王的聚集地,还有,哥们，别卷了！")
     engine.runAndWait()
 
 def LAB():
@@ -52,7 +52,7 @@ def LAB():
 
 def TEA():
     engine = pyttsx3.init()
-    engine.say("好好学习，我爱华姐的课，更爱海涛哥的课")
+    engine.say("好好学习，我爱华姐的课，更爱海涛哥的课,谢谢师座")
     engine.runAndWait()
 
 def OCT():
